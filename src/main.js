@@ -1,0 +1,37 @@
+// Font import
+import '@fontsource/roboto/100.css'
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import '@fontsource/roboto/900.css'
+//Base
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+//Router
+import router from './router/router'
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js';
+//Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
+//Scrollreveal and motion
+import { MotionPlugin } from '@vueuse/motion'
+
+
+const vuetify = createVuetify({
+    components,
+    directives,
+})
+
+const app = createApp(App)
+app.use(MotionPlugin)
+app.use(vuetify)
+app.use(router)
+app.mount('#app')
