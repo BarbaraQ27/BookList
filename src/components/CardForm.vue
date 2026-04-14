@@ -72,9 +72,9 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // Emit a custom event to the parent, passing the new card data
+      // emite la data de newCard al padre
       this.$emit("card-added", { ...this.newCard });
-      // Reset the form fields
+      // para resetear los elementos del formulario
       this.newCard.title = "";
       this.newCard.author = "";
       this.newCard.content = "";

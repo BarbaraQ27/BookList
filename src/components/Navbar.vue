@@ -1,5 +1,3 @@
-
-
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -18,9 +16,11 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink to="/">Home</RouterLink>
+            <!-- prueba de router -->
           </li>
           <li class="nav-item">
             <RouterLink to="/about">About</RouterLink>
+            <!-- prueba de router -->
           </li>
         </ul>
       </div>

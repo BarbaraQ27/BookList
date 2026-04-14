@@ -44,12 +44,12 @@ import Navbar from "./Navbar.vue";
 
 <style scoped>
 .container-fluid {
-  position: relative;
-  /* Set the background image and properties */
-  background-image: url("/assets/books banner.jpg"); /* */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the image */
-  height: 50vw; /* Set a height for the container */
+  position: relative; /* posicion relativa (padre) */
+  /* Imagen de fondo */
+  background-image: url("/assets/books banner.jpg");
+  background-size: cover; /* imagen cubre todo el contenedor */
+  background-position: center; /* centrar imagen */
+  height: 50vw;
 }
 
 .container {
@@ -64,10 +64,10 @@ import Navbar from "./Navbar.vue";
 }
 
 h2 {
-  position: absolute; /* Position the text absolutely within the container */
-  top: 30%; /* Move the top edge to the middle */
-  left: 40%; /* Move the left edge to the middle */
-  transform: translate(-100%, -50%); /* Center the text precisely */
+  position: absolute; /* posicion absoluta (hijo), posicion relativa al padre */
+  top: 30%;
+  left: 40%;
+  transform: translate(-100%, -50%);
   font-size: 3vw;
   color: purple;
   text-shadow:
@@ -83,10 +83,10 @@ h2 {
 }
 
 h1 {
-  position: absolute; /* Position the text absolutely within the container */
-  top: 55%; /* Move the top edge to the middle */
-  left: 50%; /* Move the left edge to the middle */
-  transform: translate(-30%, -50%); /* Center the text precisely */
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-30%, -50%);
   font-size: 8vw;
   color: rgb(120, 67, 141);
   text-shadow:
@@ -100,10 +100,10 @@ h1 {
     0 0 51px rgb(0, 247, 255);
   animation: pulsate 2.5s infinite alternate;
 }
-/* Flickering animation */
+/* Animacion de pulso */
 @keyframes pulsate {
   100% {
-    /* Larger blur radius */
+    /* Radio de difuminado maximo */
     text-shadow:
       0 0 4px #fff,
       0 0 11px #fff,
@@ -112,10 +112,10 @@ h1 {
       0 0 80px rgb(0, 247, 255),
       0 0 90px rgb(0, 247, 255),
       0 0 100px rgb(0, 247, 255),
-      0 0 150px rgb(0, 247, 255),
+      0 0 150px rgb(0, 247, 255);
   }
   0% {
-    /* Smaller blur radius */
+    /* Radio de difuminado minimo */
     text-shadow:
       0 0 2px #fff,
       0 0 4px #fff,
