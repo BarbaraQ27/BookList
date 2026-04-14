@@ -10,7 +10,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 //Router
-import router from './router/router'
+import router from './router'
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js';
